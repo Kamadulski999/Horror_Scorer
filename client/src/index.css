@@ -1,10 +1,35 @@
+@font-face {
+  src: url(fonts/Nosifer-Regular.ttf);
+  font-family: nos;
+}
+@font-face {
+  src: url(fonts/RubikGlitch-Regular.ttf);
+  font-family: rub;
+}
+@font-face {
+  src: url(fonts/Eater-Regular.ttf);
+  font-family: eat;
+}
+@font-face {
+  src: url(fonts/ReggaeOne-Regular.ttf);
+  font-family: rag;
+}
+
+html { 
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7be60dbe-4a05-4c97-adb3-c05193e79373/dc46272-b30ee48b-5fc6-46a2-836c-e2492f7751ee.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiZTYwZGJlLTRhMDUtNGM5Ny1hZGIzLWMwNTE5M2U3OTM3M1wvZGM0NjI3Mi1iMzBlZTQ4Yi01ZmM2LTQ2YTItODM2Yy1lMjQ5MmY3NzUxZWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9qMVpRAnFNYW58lEL5BN6pKFywc3kbNyx6_AsDfXCI) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 :root {
   --primary: #497573;
-  --secondary: #99f7f2;
+  --secondary: #c41616;
   --tertiary: #b2c2c1;
   --quatrinary: #cadbda;
-  --light: #e1f5f4;
-  --dark: #6c7575;
+  --light: #c98989;
+  --dark: #050505;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -26,12 +51,12 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inconsolata', monospace;
+  font-family: rag;
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
   color: var(--dark);
-  background-color: #f3fffee1;
+  background-color: #dacecee1;
 }
 
 h1,
@@ -40,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
+  font-family: nos;
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
@@ -51,10 +76,12 @@ h1 {
 }
 
 h2 {
+  font-family: eat;
   font-size: 2rem;
 }
 
 h3 {
+  font-family: rag;
   font-size: 1.75rem;
 }
 
@@ -109,7 +136,8 @@ nav a:hover {
 
 .btn,
 .pill {
-  font-size: 1.3rem;
+  font-size:2rem;
+  font-weight: 999;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
   margin: 5px 0;
@@ -141,6 +169,7 @@ nav a:hover {
 }
 
 .card-header {
+  font-family: rub;
   color: var(--secondary);
   margin: 0;
   background-color: var(--dark);
@@ -846,6 +875,7 @@ nav a:hover {
 }
 
 .col-1 {
+  font-family: rag;
   flex: 0 0 calc(100% * 1 / 12 - 0.5%);
 }
 
