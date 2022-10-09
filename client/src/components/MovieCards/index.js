@@ -21,7 +21,7 @@ const MovieCards = () => {
         "popularity": 5279.659,
         "poster_path": "/l8WZDmjJCxOhGToTlhO6l9YAytr.jpg",
         "release_date": "2022-07-27",
-        "title": "Orphan: First Kill",
+        "title": "Orphan: First Kill"
         "video": false,
         "vote_average": 6.9,
         "vote_count": 868
