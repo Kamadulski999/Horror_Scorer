@@ -2,21 +2,24 @@
   src: url(fonts/Nosifer-Regular.ttf);
   font-family: nos;
 }
+
 @font-face {
   src: url(fonts/RubikGlitch-Regular.ttf);
   font-family: rub;
 }
+
 @font-face {
   src: url(fonts/Eater-Regular.ttf);
   font-family: eat;
 }
+
 @font-face {
   src: url(fonts/ReggaeOne-Regular.ttf);
   font-family: rag;
 }
 
-html { 
-  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7be60dbe-4a05-4c97-adb3-c05193e79373/dc46272-b30ee48b-5fc6-46a2-836c-e2492f7751ee.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiZTYwZGJlLTRhMDUtNGM5Ny1hZGIzLWMwNTE5M2U3OTM3M1wvZGM0NjI3Mi1iMzBlZTQ4Yi01ZmM2LTQ2YTItODM2Yy1lMjQ5MmY3NzUxZWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9qMVpRAnFNYW58lEL5BN6pKFywc3kbNyx6_AsDfXCI) no-repeat center center fixed; 
+html {
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7be60dbe-4a05-4c97-adb3-c05193e79373/dc46272-b30ee48b-5fc6-46a2-836c-e2492f7751ee.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiZTYwZGJlLTRhMDUtNGM5Ny1hZGIzLWMwNTE5M2U3OTM3M1wvZGM0NjI3Mi1iMzBlZTQ4Yi01ZmM2LTQ2YTItODM2Yy1lMjQ5MmY3NzUxZWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9qMVpRAnFNYW58lEL5BN6pKFywc3kbNyx6_AsDfXCI) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -136,7 +139,7 @@ nav a:hover {
 
 .btn,
 .pill {
-  font-size:2rem;
+  font-size: 2rem;
   font-weight: 999;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
@@ -208,8 +211,9 @@ nav a:hover {
   position: absolute;
   left: -9999px;
 }
-[type='radio']:checked + label,
-[type='radio']:not(:checked) + label {
+
+[type='radio']:checked+label,
+[type='radio']:not(:checked)+label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
@@ -219,8 +223,8 @@ nav a:hover {
   margin-right: 0.2rem;
 }
 
-[type='radio']:checked + label:before,
-[type='radio']:not(:checked) + label:before {
+[type='radio']:checked+label:before,
+[type='radio']:not(:checked)+label:before {
   content: '';
   position: absolute;
   left: 0;
@@ -231,8 +235,9 @@ nav a:hover {
   border-radius: 100%;
   background: #fff;
 }
-[type='radio']:checked + label:after,
-[type='radio']:not(:checked) + label:after {
+
+[type='radio']:checked+label:after,
+[type='radio']:not(:checked)+label:after {
   content: '';
   width: 12px;
   height: 12px;
@@ -245,13 +250,13 @@ nav a:hover {
   transition: all 0.2s ease;
 }
 
-[type='radio']:not(:checked) + label:after {
+[type='radio']:not(:checked)+label:after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-[type='radio']:checked + label:after {
+[type='radio']:checked+label:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
