@@ -1,4 +1,3 @@
-import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -31,6 +30,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -54,14 +54,14 @@ function App() {
                   <Route path=":username" element={<Profile />} />
                   <Route path="" element={<Profile />} />
                 </Route>
-                <Route
+                {/* <Route
                   path="/thought/:id"
                   element={<SingleThought />}
                 />
               <Route
                 path="/thought"
                 element={<SingleThought />}
-              />
+              /> */}
               <Route
               path="*"
               element={<NoMatch />}

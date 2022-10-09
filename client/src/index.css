@@ -15,13 +15,6 @@
   font-family: rag;
 }
 
-html { 
-  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7be60dbe-4a05-4c97-adb3-c05193e79373/dc46272-b30ee48b-5fc6-46a2-836c-e2492f7751ee.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiZTYwZGJlLTRhMDUtNGM5Ny1hZGIzLWMwNTE5M2U3OTM3M1wvZGM0NjI3Mi1iMzBlZTQ4Yi01ZmM2LTQ2YTItODM2Yy1lMjQ5MmY3NzUxZWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9qMVpRAnFNYW58lEL5BN6pKFywc3kbNyx6_AsDfXCI) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 :root {
   --primary: #497573;
@@ -51,12 +44,17 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: rag;
+  font-family: 'Inconsolata', monospace;
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
-  color: var(--dark);
-  background-color: #dacecee1;
+  color: white;
+    background-color: red !important;
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7be60dbe-4a05-4c97-adb3-c05193e79373/dc46272-b30ee48b-5fc6-46a2-836c-e2492f7751ee.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiZTYwZGJlLTRhMDUtNGM5Ny1hZGIzLWMwNTE5M2U3OTM3M1wvZGM0NjI3Mi1iMzBlZTQ4Yi01ZmM2LTQ2YTItODM2Yy1lMjQ5MmY3NzUxZWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9qMVpRAnFNYW58lEL5BN6pKFywc3kbNyx6_AsDfXCI) no-repeat center center fixed !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
 }
 
 h1,
@@ -65,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: nos;
+  font-family: 'Karla', sans-serif;
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
@@ -76,12 +74,10 @@ h1 {
 }
 
 h2 {
-  font-family: eat;
   font-size: 2rem;
 }
 
 h3 {
-  font-family: rag;
   font-size: 1.75rem;
 }
 
@@ -136,8 +132,7 @@ nav a:hover {
 
 .btn,
 .pill {
-  font-size:2rem;
-  font-weight: 999;
+  font-size: 1.3rem;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
   margin: 5px 0;
@@ -169,7 +164,6 @@ nav a:hover {
 }
 
 .card-header {
-  font-family: rub;
   color: var(--secondary);
   margin: 0;
   background-color: var(--dark);
@@ -208,8 +202,8 @@ nav a:hover {
   position: absolute;
   left: -9999px;
 }
-[type='radio']:checked + label,
-[type='radio']:not(:checked) + label {
+[type='radio']:checked+label,
+[type='radio']:not(:checked)+label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
@@ -219,8 +213,8 @@ nav a:hover {
   margin-right: 0.2rem;
 }
 
-[type='radio']:checked + label:before,
-[type='radio']:not(:checked) + label:before {
+[type='radio']:checked+label:before,
+[type='radio']:not(:checked)+label:before {
   content: '';
   position: absolute;
   left: 0;
@@ -231,8 +225,8 @@ nav a:hover {
   border-radius: 100%;
   background: #fff;
 }
-[type='radio']:checked + label:after,
-[type='radio']:not(:checked) + label:after {
+[type='radio']:checked+label:after,
+[type='radio']:not(:checked)+label:after {
   content: '';
   width: 12px;
   height: 12px;
@@ -245,13 +239,13 @@ nav a:hover {
   transition: all 0.2s ease;
 }
 
-[type='radio']:not(:checked) + label:after {
+[type='radio']:not(:checked)+label:after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-[type='radio']:checked + label:after {
+[type='radio']:checked+label:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -875,7 +869,6 @@ nav a:hover {
 }
 
 .col-1 {
-  font-family: rag;
   flex: 0 0 calc(100% * 1 / 12 - 0.5%);
 }
 
@@ -1277,4 +1270,26 @@ nav a:hover {
   .align-center-xl {
     align-items: center;
   }
+}
+
+.card {
+  height: 18em;
+  margin: 1em 0 1em 0;
+  background-color: red;
+}
+
+.card-body {
+  background-size: cover;
+  background-position: center;
+
+}
+
+.hide {
+  display: none;
+}
+
+#single-movie {
+  height: 75%;
+  width: 50%;
+
 }
