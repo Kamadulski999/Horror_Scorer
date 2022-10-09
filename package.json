@@ -8,8 +8,8 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm install && cd ../client && npm install",
     "seed": "cd server && npm run seed",
-    "build":"cd client && npm run build",
-    "heroku-postbuild":"npm run build"
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-  },
+  "bugs": {},
   "homepage": "",
   "devDependencies": {
     "concurrently": "^7.4.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.10.3",
+    "bootstrap": "^5.2.2",
+    "graphql": "^16.6.0",
+    "jquery": "^3.6.1",
+    "popper.js": "^1.16.1"
   }
 }
