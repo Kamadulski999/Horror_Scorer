@@ -1302,6 +1302,7 @@ nav a:hover {
 .cantfix {
   background-color: #c41616;
   color: black;
+  opacity: .85;
 }
 
 .cantfix2 {
