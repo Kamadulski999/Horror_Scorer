@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, setState} from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import ThoughtList from '../components/ThoughtList';
 import { ADD_FRIEND } from '../utils/mutations';
@@ -8,12 +8,12 @@ import FriendList from '../components/FriendList';
 import Auth from '../utils/auth';
 import ThoughtForm from '../components/ThoughtForm';
 
-const Profile = () => {
+const Profile = (props) => {
   const { username: userParam } = useParams();
-  const [addFriend] = useMutation(ADD_FRIEND);
+  const [addFriend] = useMutation(ADD_FRIEND);  
 
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam }
+  variables: { username: userParam }
   });  
 
   const user = data?.me || data?.user || {};

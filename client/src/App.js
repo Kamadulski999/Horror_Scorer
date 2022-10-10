@@ -1,3 +1,4 @@
+import React, { setState, useState } from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -33,6 +34,8 @@ const client = new ApolloClient({
 
 function App() {
 
+  const [ isClicked, setClicked] = useState('false')
+  
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -53,9 +56,13 @@ function App() {
                 element={<Signup />}
               />
                 <Route path="/profile">
-                  <Route path=":username" element={<Profile />} />
-                  <Route path="" element={<Profile />} />
-                </Route>
+                  <Route path=":username" 
+                  element={<Profile />}
+                   />
+                  <Route path="" 
+                  element={<Profile/>} 
+                  />
+                </Route> 
                 {/* <Route
                   path="/thought/:id"
                   element={<SingleThought />}

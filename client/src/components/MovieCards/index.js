@@ -13,7 +13,8 @@ const MovieCards = (props) => {
     const singleMovie = function (e) {       
         setClicked("true");        
         let obj = movieArr.find(o => o.id === parseInt(e.target.id));              
-        setMovieObj(obj)              
+        setMovieObj(obj)
+            
     }
  
 

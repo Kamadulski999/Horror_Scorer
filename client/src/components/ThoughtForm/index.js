@@ -3,7 +3,10 @@ import { useMutation } from '@apollo/client';
 import { ADD_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
-const ThoughtForm = () => {
+const ThoughtForm = (movieObj) => {
+
+  
+  
     const [addThought, { error }] = useMutation(ADD_THOUGHT, {
         update(cache, { data: { addThought } }) {
       
@@ -26,6 +29,8 @@ const ThoughtForm = () => {
             data: { thoughts: [addThought, ...thoughts] },
           });
         }
+
+        //still need a movie ID or user ID in the logic to make this work 
       });
     const [thoughtText, setText] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
@@ -37,9 +42,7 @@ const ThoughtForm = () => {
         }
       };
 
-      const handleFormSubmit = async event => {
-        event.preventDefault();
-      
+      const handleFormSubmit = async event => {          
         try {
           // add thought to database
           await addThought({

@@ -16,15 +16,17 @@ const resolvers = {
           
             throw new AuthenticationError('Not logged in');
           },
-
+// need to understand this resolver and write logic to  use movieID
         thoughts: async (parent, { username }) => {
+                         
             const params = username ? { username } : {};
             return Thought.find(params).sort({ createdAt: -1 });
             },
 
-        thought: async (parent, { _id }) => {
-            return Thought.findOne({ _id });
-            },
+        thought: async (parent, { movie_id }) => {
+          const params = movie_id
+          return Thought.find(params).sort({ createdAt: -1 });
+        },
         users: async () => {
             return User.find()
                 .select('-__v -password')
