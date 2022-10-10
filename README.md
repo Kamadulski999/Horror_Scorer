@@ -1,4 +1,1 @@
-# Horror_Scorer
-Horror Movie blog/rating app
-
-#testing
+# HorrorScorer
