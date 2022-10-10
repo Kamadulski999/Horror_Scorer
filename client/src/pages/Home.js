@@ -5,7 +5,7 @@ import { QUERY_THOUGHTS, QUERY_ME_BASIC } from "../utils/queries";
 import Auth from "../utils/auth";
 import FriendList from "../components/FriendList";
 import ThoughtForm from "../components/ThoughtForm";
-import MovieList from "../components/MovieList/movieList";
+import MovieList from "../components/MovieList/MovieList";
 
 const Home = () => {
    const loggedIn = Auth.loggedIn();

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./movieList.css";
 import { useParams } from "react-router-dom";
-import Cards from "../card/card";
+import Cards from "../Card";
 const APIKey = "8e8d1fb7683b829d728e204db461103b";
 
 const MovieList = () => {
@@ -19,7 +19,9 @@ const MovieList = () => {
             "&language=en-US&sort_by=popularity.desc&with_genres=27"
       )
          .then((res) => res.json())
+
          .then((data) => setMovieList(data.results));
+       
    };
 
    return (
