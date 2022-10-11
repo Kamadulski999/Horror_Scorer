@@ -1,5 +1,6 @@
 import React, { setState, useState} from 'react';
 import movieArr from '../../utils/movieArr';
+import "./card.css"
 
   
  
@@ -27,7 +28,7 @@ const MovieCards = (props) => {
                         <div className="mt-3">
                             <div id="movie-card" className="row">{movieArr.map(movie => (  
                             <div key={movie.id.toString()} className="col-md-6 col-lg-4 col-xl-3 card-column">
-                                <div  className="card">
+                                <div  className="movie-card card">
                                     <div onClick={singleMovie} id={movie.id} className="card-body p-2" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`}}></div>
                                 </div>
                             </div>

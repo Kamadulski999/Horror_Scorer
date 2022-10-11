@@ -4,9 +4,7 @@ import { ADD_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
 const ThoughtForm = (props) => {
-   let {movieObj} = props
-
-  
+   let {movieObj} = props  
   
     const [addThought, { error }] = useMutation(ADD_THOUGHT, {
         update(cache, { data: { addThought } }) {
@@ -72,7 +70,7 @@ const ThoughtForm = (props) => {
         <form className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}>
             <textarea
-            placeholder="Here's a new thought..."
+            placeholder="Leave a Comment..."
             value={thoughtText}
             className="form-input col-12 col-md-9"
             onChange={handleChange}

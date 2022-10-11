@@ -1,18 +1,20 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import './thought.css'
 
 
 
 const ThoughtList = ({ thoughts, title, movieObj}) => {      
   if(document.location.pathname.includes("profile")) {
     if (!thoughts.length) {
-      return <h3>No Reviews Yet</h3>;    }
+      return <h3>No Reviews Yet</h3>;    
+    }
     return (
-      <div>
+      <div className = "thought-div">
         <h3>{title}</h3>
         {thoughts &&
           thoughts.map(thought => (
-            <div key={thought._id} className="card mb-3">
+            <div key={thought._id} className="card mb-3 thought">
               <p className="card-header">
                 <Link
                   to={`/profile/${thought.username}`}
