@@ -1,4 +1,4 @@
-import React, { useState, setState} from 'react';
+import React from 'react';
 import ThoughtList from '../ThoughtList';
 import ThoughtForm from '../ThoughtForm'
 
@@ -15,17 +15,25 @@ const Movie = (props) => {
        
    <>
       <div className= {`container-fluid && ${isClicked === "false" && "hide"}`}>
+        <div>
          <img id="single-movie" src={`https://image.tmdb.org/t/p/original${movieObj.poster_path}`} alt=""></img>
          <button onClick={closeWindow} id="close">Close The Window</button>       
-      </div>
-      <div> 
-      <ThoughtForm></ThoughtForm>
+        </div>
+      <div>
+      <ThoughtForm 
+      movieObj = {movieObj}
+      isClicked = {isClicked} 
+      setClicked = {setClicked} 
+      ></ThoughtForm>
       <ThoughtList 
       thoughts = {thoughts}
       isClicked = {isClicked}
       movieObj = {movieObj}      
-      ></ThoughtList>            
+      ></ThoughtList>
+      </div>  
       </div>
+
+      
    </>
   
 

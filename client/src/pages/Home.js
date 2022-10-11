@@ -10,15 +10,12 @@ import Movie from '../components/Movie';
 import ThoughtForm from '../components/ThoughtForm';
 
 
-const Home = () => {
-
-  
+const Home = (props) => {
+  let {setClicked, isClicked} = props  
   const loggedIn = Auth.loggedIn();
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
-  const thoughts = data?.thoughts || []; 
-
-  const [ isClicked, setClicked] = useState('false')
+  const thoughts = data?.thoughts || [];   
   const [movieObj, setMovieObj] = useState({"id": 760161,  
   "original_language": "en",
   "original_title": "Orphan: First Kill",

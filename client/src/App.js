@@ -45,7 +45,9 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={<Home />}
+                element={<Home
+                  isClicked = {isClicked} setClicked = {setClicked}
+                  ></Home>}
               />
               <Route
                 path="/login"
@@ -57,20 +59,24 @@ function App() {
               />
                 <Route path="/profile">
                   <Route path=":username" 
-                  element={<Profile />}
+                  element={<Profile
+                    isClicked = {isClicked} setClicked = {setClicked}
+                    ></Profile>}
                    />
                   <Route path="" 
-                  element={<Profile/>} 
+                  element={<Profile
+                    isClicked = {isClicked} setClicked = {setClicked}
+                    ></Profile>} 
                   />
                 </Route> 
-                {/* <Route
+                <Route
                   path="/thought/:id"
                   element={<SingleThought />}
                 />
               <Route
                 path="/thought"
                 element={<SingleThought />}
-              /> */}
+              />
               <Route
               path="*"
               element={<NoMatch />}

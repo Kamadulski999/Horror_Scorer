@@ -9,9 +9,11 @@ import Auth from '../utils/auth';
 import ThoughtForm from '../components/ThoughtForm';
 
 const Profile = (props) => {
+  const {isClicked, setClicked} = props
   const { username: userParam } = useParams();
   const [addFriend] = useMutation(ADD_FRIEND);  
 
+  setClicked("false");
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
   variables: { username: userParam }
   });  
@@ -69,7 +71,7 @@ const Profile = (props) => {
         />
     </div>
     </div> 
-    <div className="mb-3">{!userParam && <ThoughtForm />}</div>    
+    {/* <div className="mb-3">{!userParam && <ThoughtForm />}</div>     */}
     </div>
   );
 };
