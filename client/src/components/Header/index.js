@@ -9,10 +9,17 @@ const Header = () => {
   };
 
   return (
+<<<<<<< HEAD
     <header className="bg-secondary mb-4 py-2 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <Link to="/">
           <h1>Deep Thoughts</h1>
+=======
+    <header className="cantfix mb-4 py-2 flex-row align-center">
+      <div className="container flex-row justify-space-between-lg justify-center align-center">
+        <Link to="/">
+          <h1>Horror Scorer</h1>
+>>>>>>> pre-production
         </Link>
 
         <nav className="text-center">

@@ -15,22 +15,15 @@ const SingleThought = props => {
 
   const thought = data?.thought || {};
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div>
-<<<<<<< HEAD
       <div className="card mb-3">
-=======
-      <div className="card mb-3 thought">
->>>>>>> pre-production
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
             {thought.username}
           </span>{' '}
-          thought on {thought.createdAt}
+          THOUGHT
+          {/* thought on {thought.createdAt} */}
         </p>
         <div className="card-body">
           <p>{thought.thoughtText}</p>

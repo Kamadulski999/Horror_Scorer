@@ -25,9 +25,16 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_THOUGHT = gql`
+<<<<<<< HEAD
   mutation addThought($thoughtText: String!) {
     addThought(thoughtText: $thoughtText) {
       _id
+=======
+  mutation addThought($movie_id: Int!, $thoughtText: String!) {
+    addThought(movie_id: $movie_id, thoughtText: $thoughtText) {
+      _id
+      movie_id
+>>>>>>> pre-production
       thoughtText
       createdAt
       username
@@ -40,7 +47,11 @@ export const ADD_THOUGHT = gql`
 `;
 
 export const ADD_REACTION = gql`
+<<<<<<< HEAD
   mutation addReaction($thoughtId: ID!, $reactionBody: String!) {
+=======
+  mutation addReaction($thoughtId: Int!, $reactionBody: String!) {
+>>>>>>> pre-production
     addReaction(thoughtId: $thoughtId, reactionBody: $reactionBody) {
       _id
       reactionCount
