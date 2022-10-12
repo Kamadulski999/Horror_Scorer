@@ -45,6 +45,7 @@
    align-items: center;
    border: #e80707 solid;
    background-color: black;
+   margin-bottom: 1em;
 }
 
 .movie-backdrop {

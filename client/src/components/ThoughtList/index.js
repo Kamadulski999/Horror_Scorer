@@ -10,7 +10,7 @@ const ThoughtList = ({ thoughts, title, movieObj}) => {
       return <h3>No Reviews Yet</h3>;    
     }
     return (
-      <div className = "thought-div">
+      <div className="thought-div">
         <h3>{title}</h3>
         {thoughts &&
           thoughts.map(thought => (

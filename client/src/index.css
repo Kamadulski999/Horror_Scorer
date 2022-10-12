@@ -1320,3 +1320,7 @@ nav a:hover {
 .thought {
   height: auto;
 }
+
+.comment-div {
+  margin-top: 1.5em;
+}
