@@ -82,7 +82,7 @@ h2 {
 h3 {
   font-family: rag;
   font-size: 1.75rem;
-  color: black;
+  color: red;
 }
 
 h4 {
@@ -875,6 +875,7 @@ nav a:hover {
 
 .col-1 {
   flex: 0 0 calc(100% * 1 / 12 - 0.5%);
+  width: auto;
 }
 
 .col-2 {
@@ -1281,12 +1282,12 @@ nav a:hover {
   height: 18em;
   margin: 1em 0 1em 0;
   background-color: red;
+  /* height: auto; */
 }
 
 .card-body {
   background-size: cover;
   background-position: center;
-
 }
 
 .hide {
@@ -1313,4 +1314,9 @@ nav a:hover {
 
 .cantfix4 {
   color: #c98989;
+  height: auto;
+}
+
+.thought {
+  height: auto;
 }

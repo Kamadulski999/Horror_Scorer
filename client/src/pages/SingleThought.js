@@ -21,7 +21,7 @@ const SingleThought = props => {
 
   return (
     <div>
-      <div className="card mb-3">
+      <div className="card mb-3 thought">
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
             {thought.username}

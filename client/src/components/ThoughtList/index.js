@@ -57,7 +57,7 @@ const ThoughtList = ({ thoughts, title, movieObj}) => {
         <h3>{title}</h3>
         {filterArr && 
           filterArr.map(thought => (
-            <div key={thought._id} className="card mb-3">
+            <div key={thought._id} className="card mb-3 thought">
               <p className="card-header">
                 <Link
                   to={`/profile/${thought.username}`}
