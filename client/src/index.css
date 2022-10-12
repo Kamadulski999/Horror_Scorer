@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-:root {
-  --primary: #497573;
-  --secondary: #99f7f2;
-  --tertiary: #b2c2c1;
-  --quatrinary: #cadbda;
-  --light: #e1f5f4;
-  --dark: #6c7575;
-=======
 @font-face {
   src: url(fonts/Nosifer-Regular.ttf);
   font-family: nos;
@@ -32,7 +23,6 @@
   --quatrinary: #cadbda;
   --light: #c98989;
   --dark: #050505;
->>>>>>> pre-production
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -49,27 +39,16 @@
 html,
 body {
   min-height: 100%;
-<<<<<<< HEAD
-=======
   background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7be60dbe-4a05-4c97-adb3-c05193e79373/dc46272-b30ee48b-5fc6-46a2-836c-e2492f7751ee.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiZTYwZGJlLTRhMDUtNGM5Ny1hZGIzLWMwNTE5M2U3OTM3M1wvZGM0NjI3Mi1iMzBlZTQ4Yi01ZmM2LTQ2YTItODM2Yy1lMjQ5MmY3NzUxZWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9qMVpRAnFNYW58lEL5BN6pKFywc3kbNyx6_AsDfXCI) no-repeat center center fixed !important;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important;
->>>>>>> pre-production
 }
 
 body {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  font-family: 'Inconsolata', monospace;
-  font-weight: 400;
-  line-height: 1.5;
-  font-size: 20px;
-  color: var(--dark);
-  background-color: #f3fffee1;
-=======
   font-family: rag;
   font-weight: 400;
   line-height: 1.5;
@@ -77,7 +56,6 @@ body {
   color: white;
     background-color: red;
 
->>>>>>> pre-production
 }
 
 h1,
@@ -86,11 +64,7 @@ h3,
 h4,
 h5,
 h6 {
-<<<<<<< HEAD
-  font-family: 'Karla', sans-serif;
-=======
   font-family: nos;
->>>>>>> pre-production
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
@@ -101,21 +75,14 @@ h1 {
 }
 
 h2 {
-<<<<<<< HEAD
-=======
   font-family: eat;
->>>>>>> pre-production
   font-size: 2rem;
 }
 
 h3 {
-<<<<<<< HEAD
-  font-size: 1.75rem;
-=======
   font-family: rag;
   font-size: 1.75rem;
   color: red;
->>>>>>> pre-production
 }
 
 h4 {
@@ -211,10 +178,7 @@ nav a:hover {
 .card-body {
   padding: 2.5%;
   font-size: 1.4rem;
-<<<<<<< HEAD
-=======
   background-color: var(--light);
->>>>>>> pre-production
 }
 
 /* FORM */
@@ -243,13 +207,8 @@ nav a:hover {
   position: absolute;
   left: -9999px;
 }
-<<<<<<< HEAD
-[type='radio']:checked + label,
-[type='radio']:not(:checked) + label {
-=======
 [type='radio']:checked+label,
 [type='radio']:not(:checked)+label {
->>>>>>> pre-production
   position: relative;
   padding-left: 25px;
   cursor: pointer;
@@ -259,13 +218,8 @@ nav a:hover {
   margin-right: 0.2rem;
 }
 
-<<<<<<< HEAD
-[type='radio']:checked + label:before,
-[type='radio']:not(:checked) + label:before {
-=======
 [type='radio']:checked+label:before,
 [type='radio']:not(:checked)+label:before {
->>>>>>> pre-production
   content: '';
   position: absolute;
   left: 0;
@@ -276,13 +230,8 @@ nav a:hover {
   border-radius: 100%;
   background: #fff;
 }
-<<<<<<< HEAD
-[type='radio']:checked + label:after,
-[type='radio']:not(:checked) + label:after {
-=======
 [type='radio']:checked+label:after,
 [type='radio']:not(:checked)+label:after {
->>>>>>> pre-production
   content: '';
   width: 12px;
   height: 12px;
@@ -295,21 +244,13 @@ nav a:hover {
   transition: all 0.2s ease;
 }
 
-<<<<<<< HEAD
-[type='radio']:not(:checked) + label:after {
-=======
 [type='radio']:not(:checked)+label:after {
->>>>>>> pre-production
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-<<<<<<< HEAD
-[type='radio']:checked + label:after {
-=======
 [type='radio']:checked+label:after {
->>>>>>> pre-production
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -851,11 +792,7 @@ nav a:hover {
 }
 
 .text-light {
-<<<<<<< HEAD
-  color: var(--light);
-=======
  color: var(--light);
->>>>>>> pre-production
 }
 
 .text-dark {
@@ -938,10 +875,7 @@ nav a:hover {
 
 .col-1 {
   flex: 0 0 calc(100% * 1 / 12 - 0.5%);
-<<<<<<< HEAD
-=======
   width: auto;
->>>>>>> pre-production
 }
 
 .col-2 {
@@ -1343,8 +1277,6 @@ nav a:hover {
     align-items: center;
   }
 }
-<<<<<<< HEAD
-=======
 
 .card {
   height: 18em;
@@ -1392,4 +1324,3 @@ nav a:hover {
 .comment-div {
   margin-top: 1.5em;
 }
->>>>>>> pre-production

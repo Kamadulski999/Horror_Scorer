@@ -21,11 +21,7 @@ const SingleThought = props => {
 
   return (
     <div>
-<<<<<<< HEAD
-      <div className="card mb-3">
-=======
       <div className="card mb-3 thought">
->>>>>>> pre-production
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
             {thought.username}
