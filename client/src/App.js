@@ -1,4 +1,4 @@
-import React, { setState, useState } from 'react';
+import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -10,8 +10,6 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
-
-
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -33,9 +31,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-
-  const [ isClicked, setClicked] = useState('false')
-  
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -45,9 +40,7 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={<Home
-                  isClicked = {isClicked} setClicked = {setClicked}
-                  ></Home>}
+                element={<Home />}
               />
               <Route
                 path="/login"
@@ -58,17 +51,9 @@ function App() {
                 element={<Signup />}
               />
                 <Route path="/profile">
-                  <Route path=":username" 
-                  element={<Profile
-                    isClicked = {isClicked} setClicked = {setClicked}
-                    ></Profile>}
-                   />
-                  <Route path="" 
-                  element={<Profile
-                    isClicked = {isClicked} setClicked = {setClicked}
-                    ></Profile>} 
-                  />
-                </Route> 
+                  <Route path=":username" element={<Profile />} />
+                  <Route path="" element={<Profile />} />
+                </Route>
                 <Route
                   path="/thought/:id"
                   element={<SingleThought />}

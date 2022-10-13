@@ -4,7 +4,6 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
 type Thought {
     _id: ID
-    movie_id: Int
     thoughtText: String
     createdAt: String
     username: String
@@ -38,13 +37,13 @@ type Thought {
     users: [User]
     user(username: String!): User
     thoughts(username: String): [Thought]
-    thought(movie_id: Int!): Thought
+    thought(_id: ID!): Thought
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addThought(movie_id: Int!, thoughtText: String!): Thought
+    addThought(thoughtText: String!): Thought
     addReaction(thoughtId: ID!, reactionBody: String!): Thought
     addFriend(friendId: ID!): User
   }

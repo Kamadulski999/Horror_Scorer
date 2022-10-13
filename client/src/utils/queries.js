@@ -1,12 +1,9 @@
 import { gql } from '@apollo/client';
 
-
-// MVPcomment adding in movie ID to querythoughts makes it so comments won't display on movie 
-export const QUERY_THOUGHTS = gql` 
-  query thoughts( $username: String) {
+export const QUERY_THOUGHTS = gql`
+  query thoughts($username: String) {
     thoughts(username: $username) {
       _id
-      movie_id
       thoughtText
       createdAt
       username
@@ -22,8 +19,8 @@ export const QUERY_THOUGHTS = gql`
 `;
 
 export const QUERY_THOUGHT = gql`
-  query thought($_id: ID) {
-    thought(_id: $_id) {
+  query thought($id: ID!) {
+    thought(_id: $id) {
       _id
       thoughtText
       createdAt
