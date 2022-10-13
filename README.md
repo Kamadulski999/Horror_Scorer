@@ -16,9 +16,9 @@
 3. Sam Moore at https://github.com/semoore2093<br /> 
 4. Ian Bridges at https://github.com/ianbridges<br /> <p>
 5. Bobby Bridges at https://github.com/Zaphod1977</p><h2>Github Link</h2> <p>https://github.com/Zaphod1977/Horror_Scorer</p><h2>Email Address</h2>
-<p>andrew.kamadulski@gmail.com<br/>
-shom@shomthedude.com<br/>
-sam@samtheotherguy.com<br/>
-megabridge12@gmail.com<br/>
-carfiguru@hotmail.com</p>
+<p>1. andrew.kamadulski@gmail.com<br/>
+2. shom@shomthedude.com<br/>
+3. sam@samtheotherguy.com<br/>
+4. megabridge12@gmail.com<br/>
+5. carfiguru@hotmail.com</p>
 <p> <img src="https://github.com/Zaphod1977/Horror_Scorer/blob/pre-production/client/src/images/horror_scorer_screengrab.PNG?raw=true" width="800" /></p>
