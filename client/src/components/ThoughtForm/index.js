@@ -3,7 +3,9 @@ import { useMutation } from '@apollo/client';
 import { ADD_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
-const ThoughtForm = () => {
+const ThoughtForm = (props) => {
+   let {movieObj} = props  
+  
     const [addThought, { error }] = useMutation(ADD_THOUGHT, {
         update(cache, { data: { addThought } }) {
       
@@ -26,6 +28,8 @@ const ThoughtForm = () => {
             data: { thoughts: [addThought, ...thoughts] },
           });
         }
+
+        
       });
     const [thoughtText, setText] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
@@ -36,16 +40,19 @@ const ThoughtForm = () => {
           setCharacterCount(event.target.value.length);
         }
       };
+    
 
-      const handleFormSubmit = async event => {
-        event.preventDefault();
-      
+    let movie_id = movieObj.id
+    console.log(movieObj.id)
+
+      const handleFormSubmit = async event => {        
+        event.preventDefault()      
         try {
           // add thought to database
+          
           await addThought({
-            variables: { thoughtText }
-          });
-      
+            variables: { thoughtText, movie_id } 
+          });         
           // clear form value
           setText('');
           setCharacterCount(0);
@@ -63,12 +70,12 @@ const ThoughtForm = () => {
         <form className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}>
             <textarea
-            placeholder="Here's a new thought..."
+            placeholder="Leave a Comment..."
             value={thoughtText}
             className="form-input col-12 col-md-9"
             onChange={handleChange}
             ></textarea>
-            <button className="btn col-12 col-md-3" type="submit">
+            <button className="btn col-1 col-md-3" type="submit">
             Submit
             </button>
         </form>

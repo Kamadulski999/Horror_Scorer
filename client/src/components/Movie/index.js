@@ -27,15 +27,15 @@ const Movie = (props) => {
              
                <div className="movie-overview">
                   <div>
-                     <span className="font-weight-bold">Movie Overview:</span> <br></br>
+                  <br></br>
+                     <h3 className="font-weight-bold">Movie Overview:</h3> <br></br>
                      <br></br>
                      {movieObj ? movieObj.overview : ""}
                      <br></br>
                      <br></br>
                      <span>----------------------</span>
                      <br></br>
-                     Release date:   {movieObj.release_date }
-                     <br></br>
+                     Release date:<p>{movieObj.release_date }</p>                      
                      <span>----------------------</span>
                      <br></br>                    
                   </div>                  

@@ -1,5 +1,4 @@
 import React, { setState, useState} from 'react';
-import movieArr from '../../utils/movieArr';
 import "./card.css"
 
   
@@ -9,6 +8,7 @@ import "./card.css"
 
 const MovieCards = (props) => { 
     const {isClicked, setClicked, setMovieObj} = props
+    const [movieArr, setMovieArr] = useState([])
     
 
     const singleMovie = function (e) {       
@@ -17,8 +17,24 @@ const MovieCards = (props) => {
         setMovieObj(obj)
             
     }
- 
+    var fetchRequest = function() {
 
+        fetch('https://api.themoviedb.org/3/discover/movie?api_key=8e8d1fb7683b829d728e204db461103b&language=en-US&sort_by=popularity.desc&with_genres=27')
+        .then(function(response) {
+          response.json().then(function(data) {         
+          
+        setMovieArr(data.results); 
+          }          
+         )}   
+      )}
+      fetchRequest();
+
+    if(movieArr.length === 0) {
+        return (
+            <h3>Loading......</h3>
+        
+        )
+    } else {
     return (
        
         <div className= {`container-fluid && ${isClicked === "true" && "hide"}`}>
@@ -45,9 +61,10 @@ const MovieCards = (props) => {
 
                             
 
-        
+                            
            
         )} 
+    }
 
 
 

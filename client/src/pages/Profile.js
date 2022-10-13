@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, setState} from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import ThoughtList from '../components/ThoughtList';
 import { ADD_FRIEND } from '../utils/mutations';
@@ -8,12 +8,14 @@ import FriendList from '../components/FriendList';
 import Auth from '../utils/auth';
 import ThoughtForm from '../components/ThoughtForm';
 
-const Profile = () => {
+const Profile = (props) => {
+  const {setClicked} = props
   const { username: userParam } = useParams();
-  const [addFriend] = useMutation(ADD_FRIEND);
+  const [addFriend] = useMutation(ADD_FRIEND);  
 
+  setClicked("false");
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam }
+  variables: { username: userParam }
   });  
 
   const user = data?.me || data?.user || {};
@@ -47,7 +49,7 @@ const Profile = () => {
   return (
     <div>
       <div className="flex-row mb-3">
-        <h2 className="bg-dark text-secondary p-3 display-inline-block">
+        <h2 className="bg-dark cantfix2 p-3 display-inline-block">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
         {userParam && (
@@ -69,7 +71,7 @@ const Profile = () => {
         />
     </div>
     </div> 
-    <div className="mb-3">{!userParam && <ThoughtForm />}</div>    
+    {/* <div className="mb-3">{!userParam && <ThoughtForm />}</div>     */}
     </div>
   );
 };
