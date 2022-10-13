@@ -28,6 +28,13 @@ const MovieCards = (props) => {
          )}   
       )}
       fetchRequest();
+
+    if(movieArr.length === 0) {
+        return (
+            <h3>Loading......</h3>
+        
+        )
+    } else {
     return (
        
         <div className= {`container-fluid && ${isClicked === "true" && "hide"}`}>
@@ -54,9 +61,10 @@ const MovieCards = (props) => {
 
                             
 
-        
+                            
            
         )} 
+    }
 
 
 
