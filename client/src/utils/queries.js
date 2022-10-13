@@ -22,9 +22,10 @@ export const QUERY_THOUGHTS = gql`
 `;
 
 export const QUERY_THOUGHT = gql`
-  query thought($_id: ID) {
-    thought(_id: $_id) {
+  query thought($id: ID!) {
+    thought(_id: $id) {
       _id
+      movie_id
       thoughtText
       createdAt
       username

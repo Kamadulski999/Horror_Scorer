@@ -51,7 +51,7 @@ const ThoughtList = ({ thoughts, title, movieObj}) => {
 
     const filterArr = thoughts.filter(thoughts => thoughts.movie_id === movieObj.id)    
     if (!filterArr.length) {
-      return <h3>No Reviews Yet</h3>;    }
+      return <h3>No Comments Yet</h3>;    }
     return (
       <div>     
         <h3>{title}</h3>

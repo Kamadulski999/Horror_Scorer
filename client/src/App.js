@@ -71,11 +71,17 @@ function App() {
                 </Route> 
                 <Route
                   path="/thought/:id"
-                  element={<SingleThought />}
+                  element={<SingleThought
+                    isClicked = {isClicked} 
+                    setClicked = {setClicked}
+                    ></SingleThought>}
                 />
               <Route
                 path="/thought"
-                element={<SingleThought />}
+                element={<SingleThought
+                  isClicked = {isClicked} 
+                  setClicked = {setClicked}
+                  ></SingleThought>}
               />
               <Route
               path="*"

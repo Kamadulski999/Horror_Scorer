@@ -9,7 +9,7 @@ import Auth from '../utils/auth';
 import ThoughtForm from '../components/ThoughtForm';
 
 const Profile = (props) => {
-  const {isClicked, setClicked} = props
+  const {setClicked} = props
   const { username: userParam } = useParams();
   const [addFriend] = useMutation(ADD_FRIEND);  
 

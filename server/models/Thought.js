@@ -4,6 +4,7 @@ const dateFormat = require('../utils/dateFormat');
 
 const thoughtSchema = new Schema(
   {
+   
     movie_id: {
       type: Number,
     },
