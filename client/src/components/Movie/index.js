@@ -35,7 +35,8 @@ const Movie = (props) => {
                      <br></br>
                      <span>----------------------</span>
                      <br></br>
-                     Release date:<p>{movieObj.release_date }</p>                      
+                     Release date:<p>{movieObj.release_date }</p>
+                     IMDB Rating:<p>{movieObj.vote_average}</p>                      
                      <span>----------------------</span>
                      <br></br>                    
                   </div>                  
