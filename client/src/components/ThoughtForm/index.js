@@ -3,7 +3,8 @@ import { useMutation } from "@apollo/client";
 import { ADD_THOUGHT } from "../../utils/mutations";
 import { QUERY_THOUGHTS, QUERY_ME } from "../../utils/queries";
 
-const ThoughtForm = () => {
+const ThoughtForm = (props) => {
+   // console.log(props.movieId);
    const [addThought, { error }] = useMutation(ADD_THOUGHT, {
       update(cache, { data: { addThought } }) {
          // could potentially not exist yet, so wrap in a try/catch
@@ -39,10 +40,19 @@ const ThoughtForm = () => {
    const handleFormSubmit = async (event) => {
       event.preventDefault();
 
+      let thoughtObj = {
+         movieID: props.movieId
+
+         // {
+         //    thoughtText
+         // }
+         
+      };
+      console.log(thoughtObj);
       try {
          // add thought to database
          await addThought({
-            variables: { thoughtText },
+            variables: thoughtObj,
          });
 
          // clear form value

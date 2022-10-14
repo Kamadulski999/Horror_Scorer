@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./movie.css";
 import { useParams } from "react-router-dom";
+import ThoughtForm from "../../components/ThoughtForm";
 const APIKey = "8e8d1fb7683b829d728e204db461103b";
 
 const Movie = () => {
@@ -51,6 +52,7 @@ const Movie = () => {
          </div>
          <br></br> <br></br> <br></br>
          <div className="movie-comment">Movie Comments and Reviews Here??</div>
+         <ThoughtForm movieId={id} />
       </div>
    );
 };

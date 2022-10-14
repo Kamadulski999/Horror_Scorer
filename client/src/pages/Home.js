@@ -12,13 +12,13 @@ const Home = () => {
    const { loading, data } = useQuery(QUERY_THOUGHTS);
    const { data: userData } = useQuery(QUERY_ME_BASIC);
    const thoughts = data?.thoughts || [];
-   console.log(thoughts);
+   // console.log(thoughts);
 
    return (
       <main>
        <div className="flex-row justify-space-between">
          <MovieList />
-            {loggedIn && (
+            {/* {loggedIn && (
                <div className="col-12 mb-3">
                   <ThoughtForm />
                </div>
@@ -34,7 +34,7 @@ const Home = () => {
                      friends={userData.me.friends}
                   />
                </div>
-            ) : null}
+            ) : null} */}
          </div>
       </main>
    );

@@ -25,12 +25,13 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_THOUGHT = gql`
-  mutation addThought($thoughtText: String!) {
-    addThought(thoughtText: $thoughtText) {
+  mutation addThought($thoughtText: String!, $movieID: String!) {
+    addThought(thoughtText: $thoughtText, movieID: $movieID) {
       _id
       thoughtText
       createdAt
       username
+      movieID
       reactionCount
       reactions {
         _id
