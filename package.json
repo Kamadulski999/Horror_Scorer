@@ -21,7 +21,7 @@
   "bugs": {},
   "homepage": "",
   "devDependencies": {
-    "concurrently": "^7.4.0"
+    "concurrently": "^7.6.0"
   },
   "dependencies": {
     "apollo-server-express": "^3.10.3",
