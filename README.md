@@ -1,5 +1,5 @@
 # Work in progress
-Horror Scorer was originally a group project for the completion of the Washington University coding bootcamp. At the time it was completed we students had only been using React for two weeks and did not have a firm grasp on the concepts. We assembled the app to meet the MVP but there were several design mistakes made that lead to memory leakage. In addition, some of the desired features from the planningphase, such as a search bar and a rating system never came to fruition. I am in the process of re-factoring the app to eliminate the design flaws and to add features.
+Horror Scorer was originally a group project for the completion of the Washington University coding bootcamp. At the time it was completed we students had only been using React for two weeks and did not have a firm grasp on the concepts. We assembled the app to meet the MVP but there were several design mistakes made that lead to memory leakage. In addition, some of the desired features from the planning phase, such as a search bar and a rating system never came to fruition. I am in the process of re-factoring the app to eliminate the design flaws and to add features.
 
 
 
