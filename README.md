@@ -1,3 +1,8 @@
+# Work in progress
+Horror Scorer was originally a group project for the completion of the Washington University coding bootcamp. At the time it was completed we students had only been using React for two weeks and did not have a firm grasp on the concepts. We assembled the app to meet the MVP but there were several design mistakes made that lead to memory leakage. In addition, some of the desired features from the desing phase, such as the search bar and rating system never came to fruition. I am in the process of re-factoring the app to eliminate the design flaws and to add features.
+
+
+
 ##  <h1>The Horror Scorer Movie App</h1><h2> License </h2>
 ![license](https://img.shields.io/badge/License-Apache_2.0-blue.svg)[  Apache](https://opensource.org/licenses/Apache-2.0)<h2> Table of Contents </h2> 
 - [License](#license) 
