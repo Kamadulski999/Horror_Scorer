@@ -1,4 +1,3 @@
-import React, { setState, useState } from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -32,10 +31,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
-
-  const [ isClicked, setClicked] = useState('false')
-  
+function App() {    
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -45,8 +41,7 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={<Home
-                  isClicked = {isClicked} setClicked = {setClicked}
+                element={<Home                 
                   ></Home>}
               />
               <Route
@@ -59,28 +54,22 @@ function App() {
               />
                 <Route path="/profile">
                   <Route path=":username" 
-                  element={<Profile
-                    isClicked = {isClicked} setClicked = {setClicked}
+                  element={<Profile                    
                     ></Profile>}
                    />
                   <Route path="" 
-                  element={<Profile
-                    isClicked = {isClicked} setClicked = {setClicked}
+                  element={<Profile                    
                     ></Profile>} 
                   />
                 </Route> 
                 <Route
                   path="/thought/:id"
-                  element={<SingleThought
-                    isClicked = {isClicked} 
-                    setClicked = {setClicked}
+                  element={<SingleThought                  
                     ></SingleThought>}
                 />
               <Route
                 path="/thought"
-                element={<SingleThought
-                  isClicked = {isClicked} 
-                  setClicked = {setClicked}
+                element={<SingleThought               
                   ></SingleThought>}
               />
               <Route

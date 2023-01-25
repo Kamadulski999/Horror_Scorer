@@ -1,18 +1,17 @@
-import React, { useState } from "react";
 import ThoughtForm from "../ThoughtForm";
 import ThoughtList from "../ThoughtList";
 
 import "./movie.css";
 
 const Movie = (props) => {
-   const { isClicked, setClicked, movieObj, thoughts } = props;
+   const { movieObj, thoughts } = props;
    const closeWindow = () => {
-      setClicked("false");     
+    console.log("click"); 
    };
 
    return (
       <>
-      <div className={`container-fluid && ${isClicked === "false" && "hide"}`}>
+      <div className="container-fluid">
          <div className="movie-detail">
             <div className="movie-title">
                <div className="movie_title">{movieObj ? movieObj.original_title : ""}</div>
@@ -50,12 +49,9 @@ const Movie = (props) => {
             <div className="movie-comment">      <div>
       <ThoughtForm 
       movieObj = {movieObj}
-      isClicked = {isClicked} 
-      setClicked = {setClicked} 
       ></ThoughtForm>
       <ThoughtList 
-      thoughts = {thoughts}
-      isClicked = {isClicked}
+      thoughts = {thoughts}     
       movieObj = {movieObj}      
       ></ThoughtList>
       </div></div>

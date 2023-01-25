@@ -6,13 +6,9 @@ import "./card.css"
 
 
 
-const MovieCards = (props) => { 
-    const {isClicked, setClicked, setMovieObj} = props
-    const [movieArr, setMovieArr] = useState([])
-    
-
-    const singleMovie = function (e) {       
-        setClicked("true");        
+const MovieCards = ({setMovieObj}) => { 
+    const [movieArr, setMovieArr] = useState([])   
+    const singleMovie = function (e) {        
         let obj = movieArr.find(o => o.id === parseInt(e.target.id));              
         setMovieObj(obj)
             
@@ -37,7 +33,7 @@ const MovieCards = (props) => {
     } else {
     return (
        
-        <div className= {`container-fluid && ${isClicked === "true" && "hide"}`}>
+        <div className= "container-fluid">
             <div className="row">
                 <div className="col-lg-12">                    
                     <div className="card-deck mt-3">

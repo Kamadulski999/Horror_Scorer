@@ -1,4 +1,4 @@
-import React, { setState, useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 import Auth from '../utils/auth';
@@ -7,8 +7,7 @@ import Movie from '../components/Movie';
 
 
 
-const Home = (props) => {
-  let {setClicked, isClicked} = props  
+const Home = () => {   
   const loggedIn = Auth.loggedIn();
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
@@ -35,12 +34,10 @@ const Home = (props) => {
         <div>Loading...</div>
       ) : (
         <div className="flex-row justify-space-between">      
-        <MovieCards
-        isClicked = {isClicked} setClicked = {setClicked}
+        <MovieCards        
         movieObj = {movieObj} setMovieObj = {setMovieObj}        
         ></MovieCards> 
-        <Movie
-        isClicked = {isClicked} setClicked = {setClicked}
+        <Movie        
         movieObj = {movieObj} setMovieObj = {setMovieObj}   
         thoughts = {thoughts}    
         ></Movie>              
