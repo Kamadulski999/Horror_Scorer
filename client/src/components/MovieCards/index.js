@@ -41,6 +41,7 @@ const MovieCards = ({setMovieObj}) => {
                             <div id="movie-card" className="row">{movieArr.map(movie => (  
                             <div key={movie.id.toString()} className="col-md-6 col-lg-4 col-xl-3 card-column">
                                 <div  className="movie-card card">
+                                {/* CHANGE TO A LINK TO MOVIE PAGE  Movie page needs movieobj which needs to be lifted from the Homepage                                    */}
                                     <div onClick={singleMovie} id={movie.id} className="card-body p-2" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`}}></div>
                                 </div>
                             </div>
