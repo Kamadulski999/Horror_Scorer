@@ -34,6 +34,8 @@ const client = new ApolloClient({
 });
 
 function App() {  
+
+  
   const [movieObj, setMovieObj] = useState({"id": 760161,  
   "original_language": "en",
   "original_title": "Orphan: First Kill",

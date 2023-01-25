@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import "./card.css"
 
@@ -16,17 +16,17 @@ const MovieCards = ({movieObj, setMovieObj}) => {
         console.log(movieObj);        
     }
 
-    var fetchRequest = function() {
+    useEffect(() => {
 
         fetch('https://api.themoviedb.org/3/discover/movie?api_key=8e8d1fb7683b829d728e204db461103b&language=en-US&sort_by=popularity.desc&with_genres=27')
         .then(function(response) {
-          response.json().then(function(data) {         
-          
-        setMovieArr(data.results); 
-          }          
-         )}   
-      )}
-      fetchRequest();
+          response.json().then(function(data) {       
+                setMovieArr(data.results);
+                 },[])
+            });
+        }
+    );
+   
 
     if(movieArr.length === 0) {
         return (
