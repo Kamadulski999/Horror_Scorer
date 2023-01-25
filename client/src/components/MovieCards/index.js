@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import {Link} from 'react-router-dom';
 import "./card.css"
 
   
@@ -6,13 +7,15 @@ import "./card.css"
 
 
 
-const MovieCards = ({setMovieObj}) => { 
-    const [movieArr, setMovieArr] = useState([])   
+const MovieCards = ({movieObj, setMovieObj}) => { 
+    const [movieArr, setMovieArr] = useState([]);
+
     const singleMovie = function (e) {        
         let obj = movieArr.find(o => o.id === parseInt(e.target.id));              
-        setMovieObj(obj)
-            
+        setMovieObj(obj);
+        console.log(movieObj);        
     }
+
     var fetchRequest = function() {
 
         fetch('https://api.themoviedb.org/3/discover/movie?api_key=8e8d1fb7683b829d728e204db461103b&language=en-US&sort_by=popularity.desc&with_genres=27')
@@ -40,10 +43,10 @@ const MovieCards = ({setMovieObj}) => {
                         <div className="mt-3">
                             <div id="movie-card" className="row">{movieArr.map(movie => (  
                             <div key={movie.id.toString()} className="col-md-6 col-lg-4 col-xl-3 card-column">
-                                <div  className="movie-card card">
-                                {/* CHANGE TO A LINK TO MOVIE PAGE  Movie page needs movieobj which needs to be lifted from the Homepage                                    */}
-                                    <div onClick={singleMovie} id={movie.id} className="card-body p-2" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`}}></div>
+                                <Link to="/movie" onClick={singleMovie}><div  className="movie-card card">
+                                <div  id={movie.id} className="card-body p-2" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`}}></div>                                    
                                 </div>
+                                </Link>
                             </div>
                     ))} </div>
                     </div> 

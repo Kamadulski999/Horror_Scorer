@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -9,7 +10,7 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
-
+import Movie from './pages/Movie';
 
 
 
@@ -32,7 +33,20 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {    
+function App() {  
+  const [movieObj, setMovieObj] = useState({"id": 760161,  
+  "original_language": "en",
+  "original_title": "Orphan: First Kill",
+  "overview": "After escaping from an Estonian psychiatric facility, Leena Klammer travels to America by impersonating Esther, the missing daughter of a wealthy family. But when her mask starts to slip, she is put against a mother who will protect her family from the murderous “child” at any cost.",
+  "popularity": 5279.659,
+  "poster_path": "/l8WZDmjJCxOhGToTlhO6l9YAytr.jpg",
+  "release_date": "2022-07-27",
+  "title": "Orphan: First Kill",
+  "video": false,
+  "vote_average": 6.9,
+  "vote_count": 868
+  })
+  
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -42,13 +56,14 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={<Home                 
+                element={<Home
+                  movieObj={movieObj} setMovieObj={setMovieObj}                 
                   ></Home>}
               /> 
-              <Routes>
-              <Route
-                path="/Movie"
-                element={<Movie                 
+                            <Route
+                path="/movie"
+                element={<Movie 
+                  movieObj = {movieObj} setMovieObj={setMovieObj}                
                   ></Movie>}
               />           
               <Route

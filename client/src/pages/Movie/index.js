@@ -1,14 +1,13 @@
+import {Link} from 'react-router-dom';
 import ThoughtForm from "../../components/ThoughtForm";
 import ThoughtList from "../../components/ThoughtList";
 
 import "./movie.css";
 
-const Movie = (props) => {
-   const { movieObj, thoughts } = props;
-   const closeWindow = () => {
-    console.log("click"); 
-   };
+const Movie = ({ movieObj, thoughts }) => {
 
+   console.log(movieObj);
+     
    return (
       <>
       <div className="container-fluid">
@@ -41,20 +40,12 @@ const Movie = (props) => {
                   </div>                  
                </div>
             </div>
-            <div className="mt-3"> <button onClick={closeWindow} id="close">
+            <Link to="/"><div className="mt-3"> <button id="close">
             Return to Main Page
-         </button></div>
+         </button></div></Link>
             <br></br> <br></br> <br></br>
            
-            <div className="movie-comment">      <div>
-      <ThoughtForm 
-      movieObj = {movieObj}
-      ></ThoughtForm>
-      <ThoughtList 
-      thoughts = {thoughts}     
-      movieObj = {movieObj}      
-      ></ThoughtList>
-      </div></div>
+          
          </div>
         
        
@@ -64,3 +55,14 @@ const Movie = (props) => {
    );
 };
 export default Movie;
+
+
+{/* <div className="movie-comment">      <div>
+<ThoughtForm 
+movieObj = {movieObj}
+></ThoughtForm>
+<ThoughtList 
+thoughts = {thoughts}     
+movieObj = {movieObj}      
+></ThoughtList>
+</div></div> */}
