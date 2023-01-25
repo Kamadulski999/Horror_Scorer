@@ -12,6 +12,7 @@ import Home from './pages/Home';
 
 
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -43,7 +44,7 @@ function App() {
                 path="/"
                 element={<Home                 
                   ></Home>}
-              />
+              />            
               <Route
                 path="/login"
                 element={<Login />}

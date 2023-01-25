@@ -36,11 +36,7 @@ const Home = () => {
         <div className="flex-row justify-space-between">      
         <MovieCards        
         movieObj = {movieObj} setMovieObj = {setMovieObj}        
-        ></MovieCards> 
-        <Movie        
-        movieObj = {movieObj} setMovieObj = {setMovieObj}   
-        thoughts = {thoughts}    
-        ></Movie>              
+        ></MovieCards>                      
       </div>
       )}
     </div>   
